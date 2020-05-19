@@ -1,0 +1,275 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Restaurant/Index.cshtml";
+}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+        #wrapper, html, body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            background: #254473;
+        }
+
+        #red, #blue {
+            width: 560px;
+            height: 400px;
+            position: absolute;
+            left: 39%;
+            margin-left: -150px;
+            top: 16%;
+            margin-top: -50px;
+            xborder: solid 1px #ffffff;
+            z-index: 999999
+        }
+
+        #blue {
+            left: 150%;
+        }
+
+        #login, #table {
+            xposition: absolute;
+            z-index: 999999;
+        }
+
+        #red {
+            padding-top: 65px;
+        }
+
+        .loginBg {
+            text-align: center;
+            -webkit-border-top-right-radius: 12px;
+            -webkit-border-top-left-radius: 12px;
+            -webkit-border-bottom-right-radius: 12px;
+            -webkit-border-bottom-left-radius: 12px;
+            -moz-border-radius: 12px;
+            border-radius: 12px;
+            -webkit-box-shadow: #061d2e 0px 0px 20px;
+            -moz-box-shadow: #061d2e 0px 0px 20px;
+            box-shadow: #061d2e 0px 0px 20px;
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#ffffff));
+            background: -webkit-linear-gradient(#ffffff, #ffffff);
+            background: -moz-linear-gradient(#ffffff, #ffffff);
+            background: -ms-linear-gradient(#ffffff, #ffffff);
+            background: -o-linear-gradient(#ffffff, #ffffff);
+            background: linear-gradient(#ffffff, #ffffff);
+            -pie-background: linear-gradient(#ffffff, #ffffff);
+            behavior: url(css/htc/PIE.htc);
+            height: 420px;
+            width: 675px;
+            font-size: 14px;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .login {
+            font-size: 14px;
+            text-align: left;
+        }
+
+            .login input[type=text] {
+                padding: 0px;
+                height: auto;
+            }
+
+        .acknowledge p {
+            background: #f3f3f3;
+            padding: 10px 15px;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        .acknowledge input[type="submit"], .acknowledge a {
+            margin-left: 183px;
+            background: #253673;
+            border: 0px;
+            color: #f4cc2d;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+            .acknowledge input[type="submit"]:hover, .acknowledge a:hover {
+                background: #3e3e3e;
+                text-decoration: none;
+            }
+
+        .label {
+            text-align: right;
+            width: 200px;
+            padding-right: 10px;
+        }
+
+        .notice {
+            background: #ffffff;
+            padding: 20px 40px;
+        }
+
+            .notice p {
+                text-align: justify;
+                font-size: 16px;
+                color: #666666;
+            }
+
+                .notice p i {
+                    color: #000000;
+                }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div style="left: 39%;" id="red">
+            <table style="width: 550px;" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td class="loginBg" valign="top">
+                            <table width="100%">
+                                <tr>
+                        </td>
+                        <img src="images/dms_logo.png" style="height:100px" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                New user? <a href="#">Click here</a> to create a User Profile and log in.<br />
+                                Not a new user? If you have already created a User Profile, please log in below.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="login">
+                                <tbody>
+                                    <tr>
+                                        <td class="label">User Id :</td>
+                                        <td>
+                                            <input name="username" id="username" type="text">
+                                            <input name="roles" id="roles" value="-1" type="hidden">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Password :</td>
+                                        <td align="left"><input autocomplete="OFF" name="password" id="password" type="password"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="acknowledge">
+                                            <p>
+                                                Data in this website is property of the State of Florida, Department of Management Services. All activity on this website is subject to being intercepted, recorded, read, copied and disclosed by, and to, authorized personnel for official purposes including criminal investigations. Access or use of this website by any person, whether authorized or unauthorized, constitutes consent to these terms.
+                                                <br /><br />
+                                                <a href="index.html">I Acknowledge (Log In)</a>
+                                            </p>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Unable to log in? <a href="#">Forgot your password or your user name?</a><br />
+                                Employers or Insurance Provider Companies <a href="#">click here</a> for help.
+                            </p>
+                        </td>
+                    </tr>
+            </table>
+            </td>
+            <td valign="top">
+                <div id="login" style="cursor: pointer; padding-top: 10px; width: 15px; display: block;"><img src="images/loginRight_Icon.png" onclick="showDivArea(['login1'], ['login']); showDivArea(['table'], ['table1']);"></div>
+                <div id="login1" style="display: block;"></div>
+                </li>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+        <div id="blue" style="position: relative; margin-top: -50px; left: 150%;">
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td valign="top" width="15px">
+                            <div id="table" style="cursor: pointer; padding-top: 10px; width: 15px; display: none;">
+                                <img onclick="showDivArea(['login'], ['table']);" src="images/loginLeft_Icon.png">
+                            </div>
+                            <div id="table1" style="display: none"></div>
+                            <div id="table1" style="display: none"></div>
+                        </td>
+                        <td class="loginBg notice">
+                            <h4>Notice</h4>
+                            <p>REMINDER: Remember to update your FRS Online account if your e-mail address changes. If you use a work e-mail address, be sure to change your e-mail address when you retire or change employers. </p>
+                            <p>After logging in to your account use the <i>Profile Settings page</i> of your account to change your e-mail address. The <i>Profile Settings</i> link is in the navigation bar on the left side of the screen. You will receive an e-mail that will contain an email verification code that you must enter on FRS Online to verify that the email address you provided is valid. </p>
+                            <p>Use the Communication <i>Preferences page</i> of your account to establish or update your delivery preference for correspondence and documents from the Division of Retirement. </p>
+                            <p>The FRS Financial Guidance Program provides free, unbiased financial advice to FRS members. Call toll free <i>866-446-9377</i> and select prompt 2 to speak with a financial planner about your financial planning needs. </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1-10-1.js">
+    </script>
+    <script type="text/javascript">
+(function($){
+    $(function() {
+        var red = $('#red');
+        var blue = $('#blue');
+        var login = $('#login');
+        var table = $('#table');
+        login.click(function() {
+             red.stop().animate({
+                left: '20%'
+            }, 400);
+            blue.stop().animate({
+                left: '60%'
+            }, 400);
+        });
+        table.click(function() {
+            blue.stop().animate({
+                left: '150%'
+            }, 400);
+            red.stop().animate({
+                left: '39%'
+            }, 400);
+        });
+    });
+})(jQuery);
+function showDivArea(areas_show, areas_hide) {
+	for (var i = 0; i < areas_show.length; i++) {
+		if (document.getElementById(areas_show[i]) != null) {
+			ge = document.getElementById(areas_show[i]);
+			ge.style.display = "block";
+		}
+	}
+	for (var i = 0; i < areas_hide.length; i++) {
+		if (document.getElementById(areas_hide[i]) != null) {
+			gee = document.getElementById(areas_hide[i]);
+			gee.style.display = "none";
+		}
+	}
+}
+    </script>
+</body>
+</html>
+
