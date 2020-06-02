@@ -1,0 +1,215 @@
+﻿
+@{
+    ViewBag.Title = "IIndex";
+    Layout = "~/Views/Restaurant/Index.cshtml";
+}
+
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Restaurant the food saviour</title>
+    <link rel="stylesheet" href="~/Common/css/font-awesome-4.7.0/css/bootadmin.css">
+
+    <style type="text/css">
+        #wrapper, html, body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            background: #254473;
+        }
+
+        #red, #blue {
+            width: 560px;
+            height: 400px;
+            position: absolute;
+            left: 39%;
+            margin-left: -150px;
+            top: 16%;
+            margin-top: -50px;
+            xborder: solid 1px #ffffff;
+            z-index: 999999
+        }
+
+        #blue {
+            left: 150%;
+        }
+
+        #login, #table {
+            xposition: absolute;
+            z-index: 999999;
+        }
+
+        #red {
+            padding-top: 65px;
+        }
+
+        .loginBg {
+            text-align: center;
+            -webkit-border-top-right-radius: 12px;
+            -webkit-border-top-left-radius: 12px;
+            -webkit-border-bottom-right-radius: 12px;
+            -webkit-border-bottom-left-radius: 12px;
+            -moz-border-radius: 12px;
+            border-radius: 12px;
+            -webkit-box-shadow: #061d2e 0px 0px 20px;
+            -moz-box-shadow: #061d2e 0px 0px 20px;
+            box-shadow: #061d2e 0px 0px 20px;
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#ffffff));
+            background: -webkit-linear-gradient(#ffffff, #ffffff);
+            background: -moz-linear-gradient(#ffffff, #ffffff);
+            background: -ms-linear-gradient(#ffffff, #ffffff);
+            background: -o-linear-gradient(#ffffff, #ffffff);
+            background: linear-gradient(#ffffff, #ffffff);
+            -pie-background: linear-gradient(#ffffff, #ffffff);
+            behavior: url(css/htc/PIE.htc);
+            height: 220px;
+            width: 675px;
+            font-size: 14px;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .login {
+            font-size: 14px;
+            text-align: left;
+        }
+
+            .login input[type=text] {
+                padding: 0px;
+                height: auto;
+            }
+
+        .acknowledge p {
+            background: #f3f3f3;
+            padding: 10px 15px;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        .acknowledge input[type="submit"], .acknowledge a {
+            margin-left: 183px;
+            background: #253673;
+            border: 0px;
+            color: #f4cc2d;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+            .acknowledge input[type="submit"]:hover, .acknowledge a:hover {
+                background: #3e3e3e;
+                text-decoration: none;
+            }
+
+        .label {
+            text-align: right;
+            width: 200px;
+            padding-right: 10px;
+        }
+
+        .notice {
+            background: #ffffff;
+            padding: 20px 40px;
+        }
+
+            .notice p {
+                text-align: justify;
+                font-size: 16px;
+                color: #666666;
+            }
+
+                .notice p i {
+                    color: #000000;
+                }
+    </style>
+
+</head>
+
+<body>
+    
+    <script src="~/Common/JavaScript/ILogin.js"></script>
+    <div id="wrapper">
+        <div style="left: 39%;" id="red">
+            <table style="width: 550px;" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td class="loginBg" valign="top">
+                            <table width="100%">
+                                <tr>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="login">
+                                <tbody>
+                                    <tr>
+                                        <td>UserName :</td>
+                                        <td align="left"><input autocomplete="OFF" name="Username" id="Username"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Code :</td>
+                                        <td align="left"><input autocomplete="OFF" name="password" id="Password" type="password"></td>
+                                    </tr>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="acknowledge">
+                            <p>
+                                @*<a href="index.html">Log In</a>*@
+                                <a id="k22" href="#" onclientclick="SaveDetails();">LogIn</a>
+                            </p>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            </table>
+            </td>
+            <td valign="top">
+                <div id="login" style="cursor: pointer; padding-top: 10px; width: 15px; display: block;"></div>
+                <div id="login1" style="display: block;"></div>
+                </li>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+        <div id="blue" style="position: relative; margin-top: -50px; left: 150%;">
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td valign="top" width="15px">
+                            <div id="table" style="cursor: pointer; padding-top: 10px; width: 15px; display: none;">
+
+                            </div>
+                            <div id="table1" style="display: none"></div>
+                            <div id="table1" style="display: none"></div>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
+
