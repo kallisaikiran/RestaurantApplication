@@ -1,8 +1,10 @@
 ﻿
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "Register";
     Layout = "~/Views/Restaurant/Index.cshtml";
 }
+
+
 
 <!doctype html>
 <html>
@@ -150,8 +152,7 @@
                     <tr>
                         <td>
                             <p>
-                                New user? <a href="#" onClick="Register();">Click here</a> to create a User Profile and log in.<br />
-                                Not a new user? If you have already created a User Profile, please log in below.
+                               
                             </p>
                         </td>
                     </tr>
@@ -160,7 +161,7 @@
                             <table class="login">
                                 <tbody>
                                     <tr>
-                                        <td>User Id :</td>
+                                        <td>Mail ID :</td>
                                         <td>
                                             <input name="username" id="username" type="text">
                                             <input name="roles" id="roles" value="-1" type="hidden">
@@ -170,11 +171,12 @@
                                         <td>Password :</td>
                                         <td align="left"><input autocomplete="OFF" name="password" id="password" type="password"></td>
                                     </tr>
+
                                     <tr>
                                         <td colspan="2" class="acknowledge">
                                             <p>
                                                 @*<a href="index.html">Log In</a>*@
-                                                <a id="a1" href="#" onclientclick="myFunction();">Log In</a>
+                                                <a id="a1" href="#" onclientclick="myFunction();">Register</a>
                                             </p>
 
                                         </td>
@@ -185,10 +187,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <p>
-                                Unable to log in? <a href="#">Forgot your password or your user name?</a><br />
-                                <a href="#">click here</a> for help.
-                            </p>
+                            
                         </td>
                     </tr>
             </table>
@@ -208,7 +207,7 @@
                     <tr>
                         <td valign="top" width="15px">
                             <div id="table" style="cursor: pointer; padding-top: 10px; width: 15px; display: none;">
-                                @*<img onclick="showDivArea(['login'], ['table']);" >*@
+                               
                             </div>
                             <div id="table1" style="display: none"></div>
                             <div id="table1" style="display: none"></div>
