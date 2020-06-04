@@ -16,8 +16,10 @@ namespace BAL
         {
             
             int Responce = 10;
+            DateTime dateTime = new DateTime();
+
             databaseHelper = new DAL.DAL.DatabaseHelper();
-            int i = databaseHelper.ExecuteNonQuery("insert into PaymentDetails(TotalCost,Year,CardNumber,CVV,OrderNumber) values ('" + TotalCost+"','"+Year+"','"+Cardnumber+"','"+CVV+"','"+ OrderNumber + "')", CommandType.Text);
+            int i = databaseHelper.ExecuteNonQuery("insert into Payments(TotalCost,Year,CardNumber,CVV,OrderNumber,DateTime) values ('" + TotalCost+"','"+Year+"','"+Cardnumber+"','"+CVV+"','"+ OrderNumber + "','"+ DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')", CommandType.Text);
             Responce = i;
             return Responce;
         }
