@@ -3,15 +3,12 @@
     ViewBag.Title = "Register";
     Layout = "~/Views/Restaurant/Index.cshtml";
 }
-
-
-
-<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Restaurant the food saviour</title>
     <link rel="stylesheet" href="~/Common/css/font-awesome-4.7.0/css/bootadmin.css">
+    
     <style type="text/css">
         #wrapper, html, body {
             position: absolute;
@@ -138,6 +135,7 @@
 </head>
 
 <body>
+    <script src="~/Common/JavaScript/Registration.js"></script>
     <div id="wrapper">
         <div style="left: 39%;" id="red">
             <table style="width: 550px;" cellpadding="0" cellspacing="0">
@@ -152,7 +150,7 @@
                     <tr>
                         <td>
                             <p>
-                               
+
                             </p>
                         </td>
                     </tr>
@@ -163,33 +161,41 @@
                                     <tr>
                                         <td>Mail ID :</td>
                                         <td>
-                                            <input name="username" id="username" type="text">
+                                            <input name="Mail" id="Mail" type="text">
                                             <input name="roles" id="roles" value="-1" type="hidden">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Password :</td>
-                                        <td align="left"><input autocomplete="OFF" name="password" id="password" type="password"></td>
+                                        <td align="left"><input autocomplete="OFF" name="password" id="Password" type="password"></td>
                                     </tr>
-
-                                    <tr>
-                                        <td colspan="2" class="acknowledge">
-                                            <p>
-                                                @*<a href="index.html">Log In</a>*@
-                                                <a id="a1" href="#" onclientclick="myFunction();">Register</a>
-                                            </p>
-
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
                     </tr>
                     <tr>
-                        <td>
-                            
+                        <td>UserName :</td>
+                        <td align="left"><input autocomplete="OFF" name="Username" id="Username"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="acknowledge">
+                            <p>
+                                @*<a href="index.html">Log In</a>*@
+                                <a id="a22"  onclientclick="SaveDetails();">Register</a>
+
+                            </p>
+
+                            <p>
+
+                                <a id="" href="/Restaurant/Login">Cancel</a>
+                            </p>
+
                         </td>
                     </tr>
+                </tbody>
+            </table>
+            </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
             </table>
             </td>
             <td valign="top">
@@ -207,7 +213,7 @@
                     <tr>
                         <td valign="top" width="15px">
                             <div id="table" style="cursor: pointer; padding-top: 10px; width: 15px; display: none;">
-                               
+
                             </div>
                             <div id="table1" style="display: none"></div>
                             <div id="table1" style="display: none"></div>
@@ -219,4 +225,5 @@
         </div>
     </div>
 </body>
+
 </html>
