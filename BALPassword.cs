@@ -41,9 +41,25 @@ namespace BAL
 
             int Responce = 10;
             databaseHelper = new DAL.DAL.DatabaseHelper();
-            int i = databaseHelper.ExecuteNonQuery("insert into Registration(Username,Password,Email) values ('" + Username + "','" + Password + "','" + Email + "')", CommandType.Text);
-            Responce = i;
-            return Responce;
+            string dbpwd = null;
+            DbDataReader drReader = databaseHelper.ExecuteReader("SELECT * FROM Registration WHERE Username='" + Username + "'", CommandType.Text);
+
+            if (drReader.HasRows)
+            {
+                if (drReader.Read())
+                {
+                    dbpwd = drReader.IsDBNull(drReader.GetOrdinal("Password")) ? string.Empty : drReader.GetString(drReader.GetOrdinal("Password"));
+                }
+            }
+            if (dbpwd != Username)
+            {
+                int i = databaseHelper.ExecuteNonQuery("insert into Registration(Username,Password,Email) values ('" + Username + "','" + Password + "','" + Email + "')", CommandType.Text);
+                Responce = i;
+                return Responce;
+            }
+            else {
+                return 0;
+            }
         }
 
 
