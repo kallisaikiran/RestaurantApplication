@@ -27,8 +27,12 @@
                 success: function (data) {
                     if (data === "1") {
                         //alert(data);
-                         location.href = "../Restaurant/Login";
+                        location.href = "../Restaurant/Login";
                     }
+                    else {
+                        alert("Try with different Username........");
+                    }
+                     
 
                 }
             });
